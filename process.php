@@ -17,7 +17,7 @@ if (!file_exists($nombre_fichero)) {
 if (filesize($nombre_fichero) == 0){
   $vacio = false;
 }else{
-  $file = fopen($nombre_fichero, "r") || exit("Error abriendo fichero!");
+  $file = fopen($nombre_fichero, "r") || ("Error abriendo fichero!");
   $linea = fgets($file);
   $terminal =  explode("_", $linea);
   $mid = trim($terminal[0]);
